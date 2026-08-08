@@ -3,14 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ramakrishna Kodali - QA Automation Engineer portfolio. Playwright, Selenium, API Testing, AI-integrated application testing and Agile QA." />
+  <meta name="description" content="Ramakrishna Kodali - QA Automation Engineer with 5+ years of expertise in Playwright, Selenium, API Testing, and AI-integrated application testing. Specialized in Agile QA and test automation." />
+  <meta name="keywords" content="QA Automation Engineer, Playwright, Selenium, API Testing, Test Automation, Quality Assurance" />
+  <meta name="author" content="Ramakrishna Kodali" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Ramakrishna Kodali | QA Automation Engineer" />
+  <meta property="og:description" content="QA Automation Engineer with 5+ years of expertise in test automation, API testing, and quality assurance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ramakrishnakodali.com" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/ramakrishnakodali" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ramakrishna Kodali | QA Automation Engineer" />
+  <meta name="twitter:description" content="5+ years QA Automation expertise | Playwright | Selenium | API Testing | Agile QA" />
   <title>Ramakrishna Kodali | QA Automation Engineer</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-DTOQO9RWCH3H90qqKJraQNOjYWNFm4pVSHX+IboQOcV0K9ztMvxxNVM9ecEt3kT0raysyWmUWQEnxvrr/dBTZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     :root {
@@ -54,8 +65,10 @@
     .nav-link {
       color: #475569;
       transition: .25s ease;
+      position: relative;
     }
     .nav-link:hover { color: var(--primary); }
+    .nav-link:focus { outline: 2px solid var(--primary); }
 
     .skill {
       border: 1px solid #e2e8f0;
@@ -116,54 +129,93 @@
       background-size: 40px 40px;
     }
 
+    .social-links a {
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+    .btn-primary:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
     @media (max-width: 768px) {
       .timeline::before { left: 9px; }
       .timeline-dot { left: 2px; }
+      .hero-grid {
+        background-size: 30px 30px;
+      }
+    }
+
+    /* Skip to main content link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
     }
   </style>
 </head>
 
 <body>
 
+<!-- Skip to main content -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- NAVIGATION -->
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/70">
-  <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
-    <a href="#home" class="font-extrabold text-xl gradient-text">RK</a>
+  <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between" role="navigation" aria-label="Primary navigation">
+    <a href="#home" class="font-extrabold text-xl gradient-text" aria-label="Ramakrishna Kodali - Go to home">RK</a>
 
     <div class="hidden md:flex items-center gap-7 text-sm font-semibold">
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#experience">Experience</a>
-      <a class="nav-link" href="#projects">Projects</a>
-      <a class="nav-link" href="#skills">Skills</a>
-      <a class="nav-link" href="#education">Education</a>
-      <a class="nav-link" href="#contact">Contact</a>
+      <a class="nav-link" href="#about" aria-label="Go to About section">About</a>
+      <a class="nav-link" href="#experience" aria-label="Go to Experience section">Experience</a>
+      <a class="nav-link" href="#projects" aria-label="Go to Projects section">Projects</a>
+      <a class="nav-link" href="#skills" aria-label="Go to Skills section">Skills</a>
+      <a class="nav-link" href="#education" aria-label="Go to Education section">Education</a>
+      <a class="nav-link" href="#contact" aria-label="Go to Contact section">Contact</a>
     </div>
 
-    <button id="menuBtn" class="md:hidden text-xl" aria-label="Open menu">
+    <button id="menuBtn" class="md:hidden text-xl p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
       <i class="fa-solid fa-bars"></i>
     </button>
   </nav>
 
   <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-200 px-5 py-4">
     <div class="flex flex-col gap-3 font-semibold">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" aria-label="Go to About section">About</a>
+      <a href="#experience" aria-label="Go to Experience section">Experience</a>
+      <a href="#projects" aria-label="Go to Projects section">Projects</a>
+      <a href="#skills" aria-label="Go to Skills section">Skills</a>
+      <a href="#education" aria-label="Go to Education section">Education</a>
+      <a href="#contact" aria-label="Go to Contact section">Contact</a>
     </div>
   </div>
 </header>
 
-<main>
+<main id="main-content">
 
 <!-- HERO -->
 <section id="home" class="hero-grid min-h-[calc(100vh-64px)] flex items-center">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20 w-full">
     <div class="max-w-5xl mx-auto text-center reveal">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-7">
-        <span class="w-2 h-2 rounded-full bg-green-500"></span>
+        <span class="w-2 h-2 rounded-full bg-green-500" aria-hidden="true"></span>
         QA Automation Engineer • 5+ Years Experience
       </div>
 
@@ -176,17 +228,17 @@
       </p>
 
       <p class="max-w-3xl mx-auto text-slate-600 text-lg leading-8">
-        QA Automation Engineer experienced in building reliable test automation,
+        QA Automation Engineer with 5+ years of expertise in building reliable test automation frameworks,
         validating complex business workflows, testing APIs and integrated web applications,
-        and driving quality across Agile product releases.
+        and driving quality across Agile product releases with minimal production defects.
       </p>
 
       <div class="flex flex-wrap justify-center gap-4 mt-9">
-        <a href="#projects" class="gradient-bg text-white px-7 py-3.5 rounded-xl font-bold shadow-lg shadow-blue-500/20 hover:-translate-y-1 transition">
-          <i class="fa-solid fa-code mr-2"></i> View Projects
+        <a href="#projects" class="gradient-bg text-white px-7 py-3.5 rounded-xl font-bold shadow-lg shadow-blue-500/20 hover:-translate-y-1 transition btn-primary" aria-label="View my projects">
+          <i class="fa-solid fa-code mr-2" aria-hidden="true"></i> View Projects
         </a>
-        <a href="#contact" class="glass px-7 py-3.5 rounded-xl font-bold hover:-translate-y-1 transition">
-          <i class="fa-regular fa-paper-plane mr-2"></i> Connect
+        <a href="#contact" class="glass px-7 py-3.5 rounded-xl font-bold hover:-translate-y-1 transition btn-primary" aria-label="Connect with me">
+          <i class="fa-regular fa-paper-plane mr-2" aria-hidden="true"></i> Connect
         </a>
       </div>
 
@@ -212,39 +264,40 @@
           <p>
             I am a results-oriented QA Automation Engineer with 5+ years of experience
             across functional, automation, regression, integration, API and end-to-end testing.
+            My expertise spans multiple testing frameworks, programming languages, and quality assurance methodologies.
           </p>
           <p>
-            My recent work includes Playwright with TypeScript for UI automation and
-            AI-assisted development using Cursor. I have experience owning automation
+            My recent work includes Playwright with TypeScript for modern UI automation and
+            AI-assisted development using Cursor. I have hands-on experience owning automation
             activities, designing regression coverage, validating business rules and
             collaborating with Developers, Product Managers and Business stakeholders.
           </p>
           <p>
             I have worked across E-Learning, AI-integrated workforce automation,
             healthcare and enterprise applications, with a strong focus on reliable
-            releases and minimal production defects.
+            releases, minimal production defects, and building maintainable test automation frameworks.
           </p>
         </div>
       </div>
 
       <div class="glass rounded-3xl p-8 reveal">
-        <p class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-6">Core Focus</p>
+        <p class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-6">Core Focus Areas</p>
         <div class="space-y-5">
           <div>
             <p class="font-bold">Automation Engineering</p>
-            <p class="text-sm text-slate-500">Reusable, maintainable UI automation</p>
+            <p class="text-sm text-slate-500">Reusable, maintainable UI automation frameworks</p>
           </div>
           <div>
             <p class="font-bold">API & Integration Testing</p>
-            <p class="text-sm text-slate-500">Service validation and business rules</p>
+            <p class="text-sm text-slate-500">Service validation and critical business rules</p>
           </div>
           <div>
             <p class="font-bold">End-to-End Quality</p>
-            <p class="text-sm text-slate-500">Critical user journeys and regression</p>
+            <p class="text-sm text-slate-500">Critical user journeys and comprehensive regression</p>
           </div>
           <div>
             <p class="font-bold">Agile Collaboration</p>
-            <p class="text-sm text-slate-500">Requirements, defects and release quality</p>
+            <p class="text-sm text-slate-500">Requirements, defects and release quality assurance</p>
           </div>
         </div>
       </div>
@@ -262,40 +315,40 @@
 
     <div class="timeline max-w-4xl mx-auto space-y-10">
       <article class="relative pl-10 md:pl-14 reveal">
-        <div class="timeline-dot top-2"></div>
+        <div class="timeline-dot top-2" aria-hidden="true"></div>
         <div class="glass rounded-3xl p-7">
           <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
             <div>
               <h3 class="text-xl font-extrabold">QA Engineer</h3>
               <p class="text-blue-600 font-bold">Tata Consultancy Services (TCS)</p>
             </div>
-            <span class="text-sm font-semibold text-slate-500">May 2023 – Present • Hyderabad</span>
+            <time class="text-sm font-semibold text-slate-500">May 2023 – Present • Hyderabad</time>
           </div>
           <ul class="list-disc pl-5 text-slate-600 space-y-2 leading-7">
-            <li>Primary Automation QA Engineer responsible for end-to-end automation and QA activities.</li>
-            <li>Developed and maintained UI automation using Playwright with TypeScript.</li>
-            <li>Used Cursor as an AI-assisted development tool for automation development, debugging and refactoring.</li>
-            <li>Performed regression, end-to-end, API and UI validation for Agile sprint releases.</li>
-            <li>Collaborated with Developers, Product Managers and Business stakeholders on requirements and enhancements.</li>
+            <li>Primary Automation QA Engineer responsible for end-to-end automation and QA activities across Agile sprints.</li>
+            <li>Developed and maintained comprehensive UI automation using Playwright with TypeScript, ensuring high code quality and maintainability.</li>
+            <li>Used Cursor as an AI-assisted development tool for automation development, debugging, refactoring and optimizing test scripts.</li>
+            <li>Performed regression, end-to-end, API and UI validation for Agile sprint releases with zero-defect objective.</li>
+            <li>Collaborated with Developers, Product Managers and Business stakeholders on requirements, enhancements and release readiness.</li>
           </ul>
         </div>
       </article>
 
       <article class="relative pl-10 md:pl-14 reveal">
-        <div class="timeline-dot top-2"></div>
+        <div class="timeline-dot top-2" aria-hidden="true"></div>
         <div class="glass rounded-3xl p-7">
           <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
             <div>
               <h3 class="text-xl font-extrabold">QA Engineer</h3>
               <p class="text-blue-600 font-bold">Carelon Global Solutions India LLP</p>
             </div>
-            <span class="text-sm font-semibold text-slate-500">Sep 2020 – Apr 2023 • Hyderabad</span>
+            <time class="text-sm font-semibold text-slate-500">Sep 2020 – Apr 2023 • Hyderabad</time>
           </div>
           <ul class="list-disc pl-5 text-slate-600 space-y-2 leading-7">
-            <li>Performed functional, automation, API, regression, integration and end-to-end testing.</li>
-            <li>Worked across enterprise healthcare and application workflows.</li>
-            <li>Designed test cases, regression coverage and automated test scripts.</li>
-            <li>Participated in the complete SDLC/STLC and Agile delivery lifecycle.</li>
+            <li>Performed functional, automation, API, regression, integration and end-to-end testing across enterprise applications.</li>
+            <li>Led testing efforts across enterprise healthcare workflows and complex application integrations.</li>
+            <li>Designed comprehensive test cases, regression coverage strategies and automated test scripts for multiple projects.</li>
+            <li>Participated in the complete SDLC/STLC and Agile delivery lifecycle with emphasis on quality gates and release readiness.</li>
           </ul>
         </div>
       </article>
@@ -310,7 +363,7 @@
       <p class="text-blue-600 font-bold uppercase tracking-wider text-sm">Selected Work</p>
       <h2 class="text-4xl font-extrabold mt-2">Key Projects</h2>
       <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
-        Selected projects highlighting automation ownership, integrated testing and domain experience.
+        Selected projects highlighting automation ownership, integrated testing and domain expertise across diverse technologies and industries.
       </p>
     </div>
 
@@ -318,7 +371,7 @@
 
       <article class="project glass rounded-3xl p-7 reveal">
         <div class="flex items-center justify-between gap-4 mb-5">
-          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center">
+          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center" aria-hidden="true">
             <i class="fa-solid fa-robot text-xl"></i>
           </div>
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-violet-50 text-violet-700">AI / Enterprise</span>
@@ -328,7 +381,7 @@
         <p class="text-slate-600 leading-7 mt-4">
           AI-integrated workforce automation platform. Worked as a primary/lead QA resource,
           owning integrated functional testing and validating AI-enabled business workflows,
-          application behavior and release quality.
+          application behavior, complex automation rules and release quality.
         </p>
         <div class="flex flex-wrap gap-2 mt-5">
           <span class="skill px-3 py-1.5 rounded-full text-sm">AI Application Testing</span>
@@ -340,7 +393,7 @@
 
       <article class="project glass rounded-3xl p-7 reveal">
         <div class="flex items-center justify-between gap-4 mb-5">
-          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center">
+          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center" aria-hidden="true">
             <i class="fa-solid fa-graduation-cap text-xl"></i>
           </div>
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-50 text-blue-700">E-Learning</span>
@@ -363,7 +416,7 @@
 
       <article class="project glass rounded-3xl p-7 reveal">
         <div class="flex items-center justify-between gap-4 mb-5">
-          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center">
+          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center" aria-hidden="true">
             <i class="fa-solid fa-chart-line text-xl"></i>
           </div>
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Healthcare</span>
@@ -372,7 +425,7 @@
         <p class="text-blue-600 font-bold mt-1">Client: GE HealthCare</p>
         <p class="text-slate-600 leading-7 mt-4">
           Performed functional and automation testing for sprint-based user stories,
-          created regression coverage and managed the end-to-end defect lifecycle.
+          created regression coverage and managed the end-to-end defect lifecycle with high accuracy.
         </p>
         <div class="flex flex-wrap gap-2 mt-5">
           <span class="skill px-3 py-1.5 rounded-full text-sm">Functionize</span>
@@ -384,7 +437,7 @@
 
       <article class="project glass rounded-3xl p-7 reveal">
         <div class="flex items-center justify-between gap-4 mb-5">
-          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center">
+          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center" aria-hidden="true">
             <i class="fa-solid fa-file-medical text-xl"></i>
           </div>
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-amber-50 text-amber-700">Claims</span>
@@ -393,7 +446,7 @@
         <p class="text-blue-600 font-bold mt-1">Client: Elevance Health</p>
         <p class="text-slate-600 leading-7 mt-4">
           Performed system and integration testing along with automation regression testing
-          for Pega-based claims workflows and business processes.
+          for Pega-based claims workflows and complex business processes.
         </p>
         <div class="flex flex-wrap gap-2 mt-5">
           <span class="skill px-3 py-1.5 rounded-full text-sm">Pega</span>
@@ -418,7 +471,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <div class="glass rounded-3xl p-7 reveal">
-        <div class="text-blue-600 text-2xl mb-4"><i class="fa-solid fa-vial"></i></div>
+        <div class="text-blue-600 text-2xl mb-4" aria-hidden="true"><i class="fa-solid fa-vial"></i></div>
         <h3 class="font-extrabold text-xl mb-4">Automation</h3>
         <div class="flex flex-wrap gap-2">
           <span class="skill px-3 py-2 rounded-lg text-sm">Playwright</span>
@@ -432,7 +485,7 @@
       </div>
 
       <div class="glass rounded-3xl p-7 reveal">
-        <div class="text-violet-600 text-2xl mb-4"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <div class="text-violet-600 text-2xl mb-4" aria-hidden="true"><i class="fa-solid fa-cloud-arrow-up"></i></div>
         <h3 class="font-extrabold text-xl mb-4">API & Services</h3>
         <div class="flex flex-wrap gap-2">
           <span class="skill px-3 py-2 rounded-lg text-sm">REST Assured</span>
@@ -444,7 +497,7 @@
       </div>
 
       <div class="glass rounded-3xl p-7 reveal">
-        <div class="text-emerald-600 text-2xl mb-4"><i class="fa-solid fa-clipboard-check"></i></div>
+        <div class="text-emerald-600 text-2xl mb-4" aria-hidden="true"><i class="fa-solid fa-clipboard-check"></i></div>
         <h3 class="font-extrabold text-xl mb-4">QA Practices</h3>
         <div class="flex flex-wrap gap-2">
           <span class="skill px-3 py-2 rounded-lg text-sm">Functional Testing</span>
@@ -457,7 +510,7 @@
       </div>
 
       <div class="glass rounded-3xl p-7 reveal">
-        <div class="text-amber-600 text-2xl mb-4"><i class="fa-solid fa-database"></i></div>
+        <div class="text-amber-600 text-2xl mb-4" aria-hidden="true"><i class="fa-solid fa-database"></i></div>
         <h3 class="font-extrabold text-xl mb-4">Data & Databases</h3>
         <div class="flex flex-wrap gap-2">
           <span class="skill px-3 py-2 rounded-lg text-sm">SQL</span>
@@ -468,7 +521,7 @@
       </div>
 
       <div class="glass rounded-3xl p-7 reveal">
-        <div class="text-indigo-600 text-2xl mb-4"><i class="fa-solid fa-gears"></i></div>
+        <div class="text-indigo-600 text-2xl mb-4" aria-hidden="true"><i class="fa-solid fa-gears"></i></div>
         <h3 class="font-extrabold text-xl mb-4">DevOps & Tools</h3>
         <div class="flex flex-wrap gap-2">
           <span class="skill px-3 py-2 rounded-lg text-sm">Jenkins</span>
@@ -480,7 +533,7 @@
       </div>
 
       <div class="glass rounded-3xl p-7 reveal">
-        <div class="text-rose-600 text-2xl mb-4"><i class="fa-solid fa-people-group"></i></div>
+        <div class="text-rose-600 text-2xl mb-4" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
         <h3 class="font-extrabold text-xl mb-4">Methodologies</h3>
         <div class="flex flex-wrap gap-2">
           <span class="skill px-3 py-2 rounded-lg text-sm">Agile</span>
@@ -505,21 +558,21 @@
 
     <div class="grid md:grid-cols-2 gap-6">
       <div class="glass rounded-3xl p-7 reveal">
-        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5">
+        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5" aria-hidden="true">
           <i class="fa-solid fa-graduation-cap"></i>
         </div>
         <h3 class="text-xl font-extrabold">MBA – Data Science</h3>
-        <p class="text-blue-600 font-bold mt-1">KL University</p>
-        <p class="text-slate-500 mt-2">CGPA: 8.52</p>
+        <p class="text-blue-600 font-bold mt-1">Koneru Lakshmaiah University</p>
+        <p class="text-slate-500 mt-2 text-sm">CGPA: 8.52</p>
       </div>
 
       <div class="glass rounded-3xl p-7 reveal">
-        <div class="w-12 h-12 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center mb-5">
+        <div class="w-12 h-12 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center mb-5" aria-hidden="true">
           <i class="fa-solid fa-microchip"></i>
         </div>
         <h3 class="text-xl font-extrabold">B.Tech – Electronics & Communication Engineering</h3>
         <p class="text-violet-600 font-bold mt-1">Koneru Lakshmaiah University</p>
-        <p class="text-slate-500 mt-2">2016 – 2020 • CGPA: 7.83</p>
+        <p class="text-slate-500 mt-2 text-sm">2016 – 2020 • CGPA: 7.83</p>
       </div>
     </div>
   </div>
@@ -532,25 +585,38 @@
       <p class="font-bold uppercase tracking-wider text-sm text-blue-100">Let's Connect</p>
       <h2 class="text-4xl md:text-5xl font-extrabold mt-3">Looking for the next quality challenge.</h2>
       <p class="max-w-2xl mx-auto mt-5 text-blue-50 text-lg leading-8">
-        Open to opportunities where I can contribute my QA automation, API testing,
-        Agile and quality engineering experience.
+        Open to opportunities where I can contribute my QA automation expertise, API testing knowledge,
+        Agile collaboration and quality engineering experience to build reliable, scalable products.
       </p>
 
       <div class="flex flex-wrap justify-center gap-4 mt-9">
         <a href="mailto:ramakrishnakodali1998@gmail.com"
-           class="bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:-translate-y-1 transition">
-          <i class="fa-solid fa-envelope mr-2"></i> Email Me
+           class="bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:-translate-y-1 transition btn-primary"
+           aria-label="Send email to Ramakrishna Kodali">
+          <i class="fa-solid fa-envelope mr-2" aria-hidden="true"></i> Email Me
         </a>
         <a href="https://www.linkedin.com/in/ramakrishnakodali/"
            target="_blank" rel="noopener noreferrer"
-           class="bg-white/15 border border-white/30 px-6 py-3 rounded-xl font-bold hover:bg-white/20 transition">
-          <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+           class="bg-white/15 border border-white/30 px-6 py-3 rounded-xl font-bold hover:bg-white/20 transition btn-primary"
+           aria-label="Connect on LinkedIn - opens in new tab">
+          <i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i> LinkedIn
+        </a>
+        <a href="https://github.com/ramakrishnakodali"
+           target="_blank" rel="noopener noreferrer"
+           class="bg-white/15 border border-white/30 px-6 py-3 rounded-xl font-bold hover:bg-white/20 transition btn-primary"
+           aria-label="Visit GitHub profile - opens in new tab">
+          <i class="fa-brands fa-github mr-2" aria-hidden="true"></i> GitHub
         </a>
       </div>
 
-      <p class="mt-8 text-sm text-blue-100">
-        <i class="fa-solid fa-location-dot mr-1"></i> Hyderabad, India
-      </p>
+      <div class="mt-8 space-y-2 text-sm text-blue-100">
+        <p>
+          <i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i> Hyderabad, India
+        </p>
+        <p>
+          <i class="fa-solid fa-phone mr-1" aria-hidden="true"></i> <a href="tel:+919493171709" class="hover:text-white transition">+91 9493171709</a>
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -559,24 +625,34 @@
 
 <footer class="py-8 border-t border-slate-200/70">
   <div class="max-w-7xl mx-auto px-5 text-center text-sm text-slate-500">
-    © <span id="year"></span> Ramakrishna Kodali. Built with HTML, Tailwind CSS & JavaScript.
+    © <span id="year"></span> Ramakrishna Kodali. Built with HTML, Tailwind CSS & JavaScript. | 
+    <a href="https://github.com/ramakrishnakodali/portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-slate-700 transition">View Source</a>
   </div>
 </footer>
 
 <script>
+  // Set current year
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  // Mobile menu toggle
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
 
   menuBtn.addEventListener("click", () => {
+    const isHidden = mobileMenu.classList.contains("hidden");
     mobileMenu.classList.toggle("hidden");
+    menuBtn.setAttribute("aria-expanded", !isHidden);
   });
 
+  // Close mobile menu when link is clicked
   mobileMenu.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuBtn.setAttribute("aria-expanded", "false");
+    });
   });
 
+  // Intersection Observer for reveal animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -587,6 +663,19 @@
   }, { threshold: 0.12 });
 
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+  // Smooth scroll behavior for better UX
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && href !== '#home') {
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
 </script>
 
 </body>
