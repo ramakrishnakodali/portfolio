@@ -11,7 +11,7 @@
   <meta property="og:description" content="QA Automation Engineer with 5+ years of expertise in test automation, API testing, and quality assurance." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ramakrishnakodali.com" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/ramakrishnakodali" />
+  <meta property="og:image" content="https://github.com/ramakrishnakodali.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ramakrishna Kodali | QA Automation Engineer" />
   <meta name="twitter:description" content="5+ years QA Automation expertise | Playwright | Selenium | API Testing | Agile QA" />
@@ -81,6 +81,20 @@
       box-shadow: 0 10px 25px rgba(37,99,235,.10);
     }
 
+
+
+    .client-name {
+      white-space: nowrap;
+      display: block;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 420px) {
+      .client-name {
+        font-size: 0.95rem;
+      }
+    }
+
     .project {
       transition: .3s ease;
     }
@@ -132,6 +146,23 @@
     .social-links a {
       transition: all 0.3s ease;
     }
+
+    .tech-logo {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .tech-fallback {
+      width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 7px; background: #e2e8f0; color: #334155; font-size: 12px; font-weight: 800;
+    }
+
+    .tech-logo-card {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+    }
     .social-links a:hover {
       transform: translateY(-3px);
     }
@@ -180,7 +211,9 @@
 <!-- NAVIGATION -->
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/70">
   <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between" role="navigation" aria-label="Primary navigation">
-    <a href="#home" class="font-extrabold text-xl gradient-text" aria-label="Ramakrishna Kodali - Go to home">RK</a>
+    <a href="#home" class="flex items-center gap-3 font-extrabold" aria-label="Ramakrishna Kodali - Go to home">
+      <span class="gradient-text">Ramakrishna Kodali</span>
+    </a>
 
     <div class="hidden md:flex items-center gap-7 text-sm font-semibold">
       <a class="nav-link" href="#about" aria-label="Go to About section">About</a>
@@ -247,6 +280,26 @@
         <span class="skill px-4 py-2 rounded-full font-semibold">Selenium + Java</span>
         <span class="skill px-4 py-2 rounded-full font-semibold">API Testing</span>
         <span class="skill px-4 py-2 rounded-full font-semibold">AI Application Testing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY LOGOS -->
+<section class="py-10">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8">
+    <div class="glass rounded-3xl p-6 reveal">
+      <p class="text-center text-xs font-bold uppercase tracking-wider text-slate-500 mb-5">Core Technologies</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="tech-logo-card skill px-4 py-2 rounded-xl font-semibold"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" alt="Playwright" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"> <span class="tech-fallback" style="display:none">PW</span>Playwright</span>
+        <span class="tech-logo-card skill px-4 py-2 rounded-xl font-semibold"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript">TypeScript</span>
+        <span class="tech-logo-card skill px-4 py-2 rounded-xl font-semibold"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" alt="Selenium">Selenium</span>
+        <span class="tech-logo-card skill px-4 py-2 rounded-xl font-semibold"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"> <span class="tech-fallback" style="display:none">☕</span>Java</span>
+        <span class="tech-logo-card skill px-4 py-2 rounded-xl font-semibold"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman">Postman</span>
+        <span class="tech-logo-card skill px-4 py-2 rounded-xl font-semibold"><img class="tech-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@16.27.1/icons/jenkins.svg" alt="Jenkins">Jenkins</span>
+        <span class="tech-logo-card skill px-4 py-2 rounded-xl font-semibold"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">Git</span>
+        <span class="tech-logo-card skill px-4 py-2 rounded-xl font-semibold"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="JIRA">JIRA</span>
+        <span class="tech-logo-card skill px-4 py-2 rounded-xl font-semibold"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB">MongoDB</span>
       </div>
     </div>
   </div>
@@ -369,14 +422,11 @@
     <div class="grid md:grid-cols-2 gap-7">
 
       <article class="project glass rounded-3xl p-7 reveal">
-        <div class="flex items-center justify-between gap-4 mb-5">
-          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center" aria-hidden="true">
-            <i class="fa-solid fa-robot text-xl"></i>
-          </div>
+        <div class="flex items-center justify-between gap-3 mb-5 min-w-0">
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-violet-50 text-violet-700">AI / Enterprise</span>
         </div>
         <h3 class="text-2xl font-extrabold">Workforce Automation</h3>
-        <p class="text-blue-600 font-bold mt-1">Client: PwC</p>
+        <p class="client-name text-blue-600 font-bold mt-1"><span class="text-slate-400 font-semibold">Client:</span>&nbsp;PwC</p>
         <p class="text-slate-600 leading-7 mt-4">
           AI-integrated workforce automation platform. Worked as a primary/lead QA resource,
           owning integrated functional testing and validating AI-enabled business workflows,
@@ -391,14 +441,11 @@
       </article>
 
       <article class="project glass rounded-3xl p-7 reveal">
-        <div class="flex items-center justify-between gap-4 mb-5">
-          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center" aria-hidden="true">
-            <i class="fa-solid fa-graduation-cap text-xl"></i>
-          </div>
+        <div class="flex items-center justify-between gap-3 mb-5 min-w-0">
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-50 text-blue-700">E-Learning</span>
         </div>
         <h3 class="text-2xl font-extrabold">Learn Platform</h3>
-        <p class="text-blue-600 font-bold mt-1">Client: PwC</p>
+        <p class="client-name text-blue-600 font-bold mt-1"><span class="text-slate-400 font-semibold">Client:</span>&nbsp;PwC</p>
         <p class="text-slate-600 leading-7 mt-4">
           Integrated E-Learning web platform covering course management, enrollment,
           learning workflows, assessments, progress tracking and reporting. Owned
@@ -414,14 +461,11 @@
       </article>
 
       <article class="project glass rounded-3xl p-7 reveal">
-        <div class="flex items-center justify-between gap-4 mb-5">
-          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center" aria-hidden="true">
-            <i class="fa-solid fa-chart-line text-xl"></i>
-          </div>
+        <div class="flex items-center justify-between gap-3 mb-5 min-w-0">
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Healthcare</span>
         </div>
         <h3 class="text-2xl font-extrabold">CDX</h3>
-        <p class="text-blue-600 font-bold mt-1">Client: GE HealthCare</p>
+        <p class="client-name text-blue-600 font-bold mt-1"><span class="text-slate-400 font-semibold">Client:</span>&nbsp;GE HealthCare</p>
         <p class="text-slate-600 leading-7 mt-4">
           Performed functional and automation testing for sprint-based user stories,
           created regression coverage and managed the end-to-end defect lifecycle with high accuracy.
@@ -435,14 +479,11 @@
       </article>
 
       <article class="project glass rounded-3xl p-7 reveal">
-        <div class="flex items-center justify-between gap-4 mb-5">
-          <div class="w-12 h-12 rounded-2xl gradient-bg text-white flex items-center justify-center" aria-hidden="true">
-            <i class="fa-solid fa-file-medical text-xl"></i>
-          </div>
+        <div class="flex items-center justify-between gap-3 mb-5 min-w-0">
           <span class="text-xs font-bold px-3 py-1 rounded-full bg-amber-50 text-amber-700">Claims</span>
         </div>
         <h3 class="text-2xl font-extrabold">Claims Intake & Workflow</h3>
-        <p class="text-blue-600 font-bold mt-1">Client: Elevance Health</p>
+        <p class="client-name text-blue-600 font-bold mt-1"><span class="text-slate-400 font-semibold">Client:</span>&nbsp;Elevance Health</p>
         <p class="text-slate-600 leading-7 mt-4">
           Performed system and integration testing along with automation regression testing
           for Pega-based claims workflows and complex business processes.
@@ -522,7 +563,6 @@
         <div class="text-indigo-600 text-2xl mb-4" aria-hidden="true"><i class="fa-solid fa-gears"></i></div>
         <h3 class="font-extrabold text-xl mb-4">DevOps & Tools</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="skill px-3 py-2 rounded-lg text-sm">Jenkins</span>
           <span class="skill px-3 py-2 rounded-lg text-sm">Git</span>
           <span class="skill px-3 py-2 rounded-lg text-sm">Azure DevOps</span>
           <span class="skill px-3 py-2 rounded-lg text-sm">JIRA</span>
